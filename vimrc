@@ -54,7 +54,6 @@ set expandtab
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
-:syntax on
 
 let g:cssparse="styl"
 
@@ -65,7 +64,6 @@ set ofu=syntaxcomplete
 " File Templates "
 ""              ""
 ":au BufNewFile *.html e ~/.vim/templates/html
-:au BufNewFile *.tex e ~/.vim/templates/tex
 ":au BufNewFile *.py e ~/.vim/templates/python
 
 
