@@ -30,7 +30,9 @@ filetype on
 "let g:pydiction_location = "/Users/Jonas/.vim/scripts/pydiction/complete-dict"
 
 
+"""""""""""""""""""""""""""""""""
 " Remapping of files
+"""""""""""""""""""""""""""""""""
 map TT :TlistToggle<cr>
 map TU :TlistUpdate<cr>
 map NHL :nohl<cr>
@@ -40,6 +42,7 @@ map NN :next!<cr>
 map BN :bn<cr>
 map BP :bp<cr>
 map FF :FufFile<cr>
+
 
 noremap <leader>) <c-]>
 
