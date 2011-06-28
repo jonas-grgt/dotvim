@@ -1,18 +1,21 @@
-source ~/.vim/scripts/closetag.vim 
-source ~/.vim/scripts/comments.vim
-source ~/.vim/scripts/minibufexpl.vim
+"""""""""""""""""""""""""""""""""
+"           Pathogen            "
+"""""""""""""""""""""""""""""""""
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
+"source ~/.vim/scripts/closetag.vim 
+"source ~/.vim/scripts/comments.vim
+"source ~/.vim/scripts/minibufexpl.vim
 
 set nu
-
 syn on
-
 set autoindent
-
 set incsearch
 set ai "auto indenting
 set ic "insensitive search
 set hls
-
 set gdefault "Enables the /g option when using the substitute command :s.  
 
 
@@ -24,7 +27,7 @@ set dictionary+=/usr/share/dict/words
 filetype plugin on
 filetype indent plugin on
 filetype on
-let g:pydiction_location = "/Users/Jonas/.vim/scripts/pydiction/complete-dict"
+"let g:pydiction_location = "/Users/Jonas/.vim/scripts/pydiction/complete-dict"
 
 
 " Remapping of files
@@ -91,4 +94,5 @@ au BufRead,BufNewFile *.styl  call StylusInit()
 au BufRead,BufNewFile *.css  setlocal autoread 
 au BufWrite *.styl  call CssParse() 
 nmap <C-y> :call CssParse()<cr>
+
 
