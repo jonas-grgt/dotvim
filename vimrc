@@ -55,6 +55,8 @@ map NN :next!<cr>
 map BN :bn<cr>
 map BP :bp<cr>
 map FF :FufFile<cr>
+map FD :FufDir<cr>
+map FB :FufBuffer<cr>
 
 
 noremap <leader>) <c-]>
