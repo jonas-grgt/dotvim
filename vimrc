@@ -4,11 +4,18 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+"
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+
+set foldmethod=indent
+set foldlevel=99
+
 
 
 "source ~/.vim/scripts/closetag.vim 
