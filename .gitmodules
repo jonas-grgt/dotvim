@@ -10,3 +10,9 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/obviousmode"]
+	path = bundle/obviousmode
+	url = https://github.com/vim-scripts/Obvious-Mode.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
