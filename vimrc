@@ -48,12 +48,17 @@ filetype on
 """""""""""""""""""""""""""""""""
 map TT :TlistToggle<cr>
 map TU :TlistUpdate<cr>
+
 map NHL :nohl<cr>
 map ss :w<cr>
+
 map WN :wnext<cr>
 map NN :next!<cr>
+
 map BN :bn<cr>
+map BD :bd<cr>
 map BP :bp<cr>
+
 map FF :FufFile<cr>
 map FD :FufDir<cr>
 map FB :FufBuffer<cr>
