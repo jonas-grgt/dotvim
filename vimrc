@@ -19,8 +19,9 @@ set foldlevel=99
 
 
 "source ~/.vim/scripts/closetag.vim 
-"source ~/.vim/scripts/comments.vim
+source ~/.vim/plugin/comments.vim
 "source ~/.vim/scripts/minibufexpl.vim
+
 
 set nu
 syn on
