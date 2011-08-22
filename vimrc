@@ -21,7 +21,7 @@ set hidden
 
 "source ~/.vim/scripts/closetag.vim 
 source ~/.vim/plugin/comments.vim
-"source ~/.vim/scripts/minibufexpl.vim
+source ~/.vim/plugin/bufferlist.vim
 
 
 set nu
@@ -48,6 +48,8 @@ filetype on
 """""""""""""""""""""""""""""""""
 " Remapping of files
 """""""""""""""""""""""""""""""""
+
+map BF :call BufferList()<CR>                                =
 map TT :TlistToggle<cr>
 map TU :TlistUpdate<cr>
 
