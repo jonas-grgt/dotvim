@@ -21,7 +21,6 @@ set hidden
 
 "source ~/.vim/scripts/closetag.vim 
 source ~/.vim/plugin/comments.vim
-source ~/.vim/plugin/bufferlist.vim
 
 
 set nu
