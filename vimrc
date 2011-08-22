@@ -13,7 +13,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 
 set completeopt=menuone,longest,preview
-set foldmethod=indent
 set foldlevel=99
 "allows to move to a different buffer without saving the current first
 set hidden
