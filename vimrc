@@ -5,6 +5,8 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim 
+
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -21,6 +23,7 @@ set hidden
 
 "source ~/.vim/scripts/closetag.vim 
 source ~/.vim/plugin/comments.vim
+
 
 
 set nu
