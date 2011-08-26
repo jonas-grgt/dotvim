@@ -117,9 +117,7 @@ function StylusInit()
     setl sts=2
 endfunction
 
-au BufRead,BufNewFile *.styl  call StylusInit()
 au BufRead,BufNewFile *.css  setlocal autoread 
 au BufWrite *.styl  call CssParse() 
 nmap <C-y> :call CssParse()<cr>
-
 

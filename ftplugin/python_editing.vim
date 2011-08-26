@@ -13,7 +13,8 @@ set foldtext=PythonFoldText()
 
 map <buffer> f za
 map <buffer> F :call ToggleFold()<CR>
-let b:folded = 1
+" Editing by me , before value was 1
+let b:folded = 0
 
 function! ToggleFold()
     if( b:folded == 0 )
@@ -82,4 +83,6 @@ function! ReFold()
     set foldtext=PythonFoldText()
     echo 
 endfunction
+
+call ToggleFold()
 
