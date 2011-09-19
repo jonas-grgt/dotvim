@@ -13,17 +13,16 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "
 let g:SuperTabDefaultCompletionType = "context"
 
+colorscheme default
+
 set completeopt=menuone,longest,preview
 set foldlevel=99
+
 "allows to move to a different buffer without saving the current first
 set hidden
 
 
-
-"source ~/.vim/scripts/closetag.vim 
 source ~/.vim/plugin/comments.vim
-
-
 
 set nu
 syn on
@@ -35,7 +34,6 @@ set hls
 set gdefault "Enables the /g option when using the substitute command :s.  
 
 
-colorscheme default
 
 set dictionary+=/usr/share/dict/words
 
@@ -120,3 +118,6 @@ au BufRead,BufNewFile *.css  setlocal autoread
 au BufWrite *.styl  call CssParse() 
 nmap <C-y> :call CssParse()<cr>
 
+"Set the cursor to a full horizontal line
+set cursorline
+:hi CursorLine guibg=#ffffff guifg=#000000 gui=NONE ctermbg=white ctermfg=black cterm=NONE
