@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/jonasg/dev/wiespeeltwaar/gig/fixtures'
 let g:netrw_dirhist_2='/home/jonasg/dev/wiespeeltwaar/templates/pagination'
+let g:netrw_dirhist_3='/home/jonasg/dev/wiespeeltwaar/gig/templatetags'
