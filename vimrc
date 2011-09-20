@@ -120,4 +120,4 @@ nmap <C-y> :call CssParse()<cr>
 
 "Set the cursor to a full horizontal line
 set cursorline
-:hi CursorLine guibg=#ffffff guifg=#000000 gui=NONE ctermbg=white ctermfg=black cterm=NONE
+:hi CursorLine guibg=#ffffff guifg=#000000 gui=NONE ctermbg=white cterm=NONE
