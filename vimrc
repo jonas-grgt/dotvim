@@ -23,6 +23,7 @@ set hidden
 
 
 source ~/.vim/plugin/comments.vim
+source ~/.vim/plugin/closetag.vim
 
 set nu
 syn on
