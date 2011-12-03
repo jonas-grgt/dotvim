@@ -1,8 +1,21 @@
-"""""""""""""""""""""""""""""""""
-"           Pathogen            "
-"""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"           Pathogen                                            " 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"           OS Specific options                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let os = substitute(system('uname'), "\n", "", "") 
+
+if os == "Linux"
+    colorscheme pablo
+endif
+
+
+
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
@@ -13,7 +26,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "
 let g:SuperTabDefaultCompletionType = "context"
 
-colorscheme default
 
 set completeopt=menuone,longest,preview
 set foldlevel=99
