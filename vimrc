@@ -21,7 +21,6 @@ set foldlevel=99
 "allows to move to a different buffer without saving the current first
 set hidden
 
-
 source ~/.vim/plugin/comments.vim
 
 set nu
@@ -121,3 +120,11 @@ nmap <C-y> :call CssParse()<cr>
 "Set the cursor to a full horizontal line
 set cursorline
 :hi CursorLine guibg=#ffffff guifg=#000000 gui=NONE ctermbg=white cterm=NONE
+
+
+"""""""""""""""""""""""""""""""""
+"       buftabs settings        "
+"""""""""""""""""""""""""""""""""
+set laststatus=2
+let g:buftabs_in_statusline=1
+source ~/.vim/plugin/buftabs.vim

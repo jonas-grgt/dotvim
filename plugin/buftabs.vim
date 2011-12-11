@@ -54,8 +54,8 @@
 "   instead of the command line. It is a good idea to configure vim to show
 "   the statusline as well when only one window is open. Add to your .vimrc:
 "
-"   set laststatus=2
-"   :let g:buftabs_in_statusline=1
+"        set laststatus=2
+"        let g:buftabs_in_statusline=1
 "    
 "   By default buftabs will take up the whole of the left-aligned section of
 "   your statusline. You can alternatively specify precisely where it goes

@@ -19,3 +19,6 @@
 [submodule "bundle/css-snippets"]
 	path = bundle/css-snippets
 	url = https://jonasgeiregat@github.com/jonasgeiregat/css-snippets-snipmate.git
+[submodule "bundle/cocoa-vim"]
+	path = bundle/cocoa-vim
+	url = https://github.com/msanders/cocoa.vim
