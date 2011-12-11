@@ -9,13 +9,14 @@ call pathogen#helptags()
 "           OS Specific options                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let os = substitute(system('uname'), "\n", "", "") 
+let hn = substitute(system('hostname'), "\n", "", "") " hostname
 
 if os == "Linux"
     colorscheme pablo
 endif
-
-
-
+if hn == "s7\.wservices\.ch"
+    colorscheme default
+endif
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
