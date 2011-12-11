@@ -1,8 +1,21 @@
-"""""""""""""""""""""""""""""""""
-"           Pathogen            "
-"""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"           Pathogen                                            " 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"           OS Specific options                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let os = substitute(system('uname'), "\n", "", "") 
+
+if os == "Linux"
+    colorscheme pablo
+endif
+
+
+
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
@@ -13,7 +26,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "
 let g:SuperTabDefaultCompletionType = "context"
 
-colorscheme default
 
 set completeopt=menuone,longest,preview
 set foldlevel=99
@@ -21,8 +33,8 @@ set foldlevel=99
 "allows to move to a different buffer without saving the current first
 set hidden
 
-
 source ~/.vim/plugin/comments.vim
+source ~/.vim/plugin/closetag.vim
 
 set nu
 syn on
@@ -121,3 +133,11 @@ nmap <C-y> :call CssParse()<cr>
 "Set the cursor to a full horizontal line
 set cursorline
 :hi CursorLine guibg=#ffffff guifg=#000000 gui=NONE ctermbg=white cterm=NONE
+
+
+"""""""""""""""""""""""""""""""""
+"       buftabs settings        "
+"""""""""""""""""""""""""""""""""
+set laststatus=2
+let g:buftabs_in_statusline=1
+source ~/.vim/plugin/buftabs.vim
