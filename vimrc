@@ -134,6 +134,8 @@ nmap <C-y> :call CssParse()<cr>
 set cursorline
 :hi CursorLine gui=NONE ctermbg=white cterm=NONE
 
+"Set the status line colors
+hi statusline ctermbg=white ctermfg=DarkGrey
 
 """""""""""""""""""""""""""""""""
 "       buftabs settings        "
