@@ -4,10 +4,10 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           OS Specific options                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let os = substitute(system('uname'), "\n", "", "") 
 
 if os == "Linux"
@@ -132,7 +132,7 @@ nmap <C-y> :call CssParse()<cr>
 
 "Set the cursor to a full horizontal line
 set cursorline
-:hi CursorLine guibg=#ffffff guifg=#000000 gui=NONE ctermbg=white cterm=NONE
+:hi CursorLine gui=NONE ctermbg=white cterm=NONE
 
 
 """""""""""""""""""""""""""""""""
