@@ -18,7 +18,9 @@ if hn == "s7\.wservices\.ch"
     colorscheme default
 endif
 
+"python settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+:au FileType *.py set ts=4 sts=4 sw=4
 
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -85,6 +87,7 @@ noremap <leader>) <c-]>
 :au BufNewFile,BufRead *.tex map £ :!open -a /Applications/Preview.app/Contents/MacOS/Preview %:t:r.pdf<cr><cr>
 :au Bufnewfile,bufread *.tex map ° :!pdflatex %:h/%:t:r.tex<cr><cr>
 ":au Bufnewfile,bufread *.tex map ° :!pdflatex escape("%:h", "/")/%:t:r.tex<cr>
+"
 
 
 

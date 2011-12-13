@@ -1,9 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/jonasg/dev/wiespeeltwaar/gig/fixtures'
-let g:netrw_dirhist_2='/home/jonasg/dev/wiespeeltwaar/templates/pagination'
-let g:netrw_dirhist_3='/home/jonasg/dev/wiespeeltwaar/gig/templatetags'
-let g:netrw_dirhist_4='/home/jonasg/dotvim'
-let g:netrw_dirhist_5='/home/jonasg/dev/wiespeeltwaar/static/css'
-let g:netrw_dirhist_6='/home/jonasg/dev/wiespeeltwaar/deps/scrapers'
-let g:netrw_dirhist_7='/home/jonasg/dev/wiespeeltwaar/source'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/jonasg'
+let g:netrw_dirhist_2='/home/jonasg/dev'
+let g:netrw_dirhist_3='/home/jonasg/dev/wiespeeltwaar'
+let g:netrw_dirhist_4='/home/jonasg/dev/wiespeeltwaar/gig'
+let g:netrw_dirhist_5='/usr/share/vim/vim72/doc'
