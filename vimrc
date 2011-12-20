@@ -18,6 +18,11 @@ if hn == "s7\.wservices\.ch"
     colorscheme default
 endif
 
+"filetype
+filetype plugin on
+filetype indent plugin on
+"filetype on
+
 "python settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 :au FileType *.py set ts=4 sts=4 sw=4
@@ -53,9 +58,6 @@ set gdefault "Enables the /g option when using the substitute command :s.
 set dictionary+=/usr/share/dict/words
 
 
-filetype plugin on
-filetype indent plugin on
-filetype on
 "let g:pydiction_location = "/Users/Jonas/.vim/scripts/pydiction/complete-dict"
 
 
@@ -63,7 +65,6 @@ filetype on
 " Remapping of files
 """""""""""""""""""""""""""""""""
 
-map BF :call BufferList()<CR>                                =
 map TT :TlistToggle<cr>
 map TU :TlistUpdate<cr>
 
@@ -138,8 +139,6 @@ nmap <C-y> :call CssParse()<cr>
 set cursorline
 :hi CursorLine gui=NONE ctermbg=white cterm=NONE
 
-"Set the status line colors
-hi statusline ctermbg=white ctermfg=DarkGrey
 
 """""""""""""""""""""""""""""""""
 "       buftabs settings        "
@@ -147,3 +146,4 @@ hi statusline ctermbg=white ctermfg=DarkGrey
 set laststatus=2
 let g:buftabs_in_statusline=1
 source ~/.vim/plugin/buftabs.vim
+hi statusline ctermbg=white ctermfg=DarkGrey

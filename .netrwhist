@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/jonasg'
 let g:netrw_dirhist_2='/home/jonasg/dev'
 let g:netrw_dirhist_3='/home/jonasg/dev/wiespeeltwaar'
 let g:netrw_dirhist_4='/home/jonasg/dev/wiespeeltwaar/gig'
 let g:netrw_dirhist_5='/usr/share/vim/vim72/doc'
+let g:netrw_dirhist_6='/usr/share/vim/vim73/doc'
+let g:netrw_dirhist_7='/Users/Jonas/dev/jonasGoesBread/vegetables/templates'
