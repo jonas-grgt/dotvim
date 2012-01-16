@@ -1,3 +1,21 @@
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+python << EOF
+import os
+import sys
+import vim
+for p in sys.path:
+    if os.path.isdir(p):
+        vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
+EOF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           Pathogen                                            " 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -10,12 +28,18 @@ call pathogen#helptags()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let os = substitute(system('uname'), "\n", "", "") 
 let hn = substitute(system('hostname'), "\n", "", "") " hostname
-
 if os == "Linux"
     colorscheme pablo
 endif
 if hn == "s7\.wservices\.ch"
     colorscheme default
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "                 Setup Taglist                                 "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
+    let Tlist_Show_One_File=1
+    nmap <silent> <F2> :TlistOpen<CR>
+    nmap <silent> <F3> :TlistAddFiles  
 endif
 
 "filetype
@@ -147,3 +171,5 @@ set laststatus=2
 let g:buftabs_in_statusline=1
 source ~/.vim/plugin/buftabs.vim
 hi statusline ctermbg=white ctermfg=DarkGrey
+" Add the virtualenv's site-packages to vim path
+
