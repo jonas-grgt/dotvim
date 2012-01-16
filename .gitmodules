@@ -19,3 +19,6 @@
 [submodule "bundle/css-snippets"]
 	path = bundle/css-snippets
 	url = https://jonasgeiregat@github.com/jonasgeiregat/css-snippets-snipmate.git
+[submodule "bundle/vim-haml"]
+	path = bundle/vim-haml
+	url = https://github.com/tpope/vim-haml.git
