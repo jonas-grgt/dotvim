@@ -33,14 +33,15 @@ filetype indent plugin on
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 :au FileType *.py set ts=4 sts=4 sw=4
 
+"sass file settings
+autocmd FileType sass set sts=2
+
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-"
-let g:SuperTabDefaultCompletionType = "context"
 
-
+"Omnicomplete options
 set completeopt=menuone,longest,preview
 set foldlevel=99
 
