@@ -1,11 +1,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           Pathogen                                            " 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"call pathogen#runtime_append_all_bundles()
+"#call pathogen#helptags()
+"#
+"#
+"#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           OS Specific options                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let os = substitute(system('uname'), "\n", "", "") 
@@ -27,7 +27,6 @@ endif
 "filetype
 filetype plugin on
 filetype indent plugin on
-"filetype on
 
 "python settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -36,7 +35,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "sass file settings
 autocmd FileType sass set sts=2
 
-"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
@@ -90,7 +89,7 @@ map FD :FufDir<cr>
 map FB :FufBuffer<cr>
 
 
-noremap <leader>) <c-]>
+nnoremap    CL :set cursorline!<CR>
 
 :au BufNewFile,BufRead *.tex map £ :!open -a /Applications/Preview.app/Contents/MacOS/Preview %:t:r.pdf<cr><cr>
 :au Bufnewfile,bufread *.tex map ° :!pdflatex %:h/%:t:r.tex<cr><cr>
@@ -154,5 +153,3 @@ set laststatus=2
 let g:buftabs_in_statusline=1
 source ~/.vim/plugin/buftabs.vim
 hi statusline ctermbg=white ctermfg=DarkGrey
-" Add the virtualenv's site-packages to vim path
-
