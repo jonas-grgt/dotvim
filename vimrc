@@ -153,3 +153,5 @@ set laststatus=2
 let g:buftabs_in_statusline=1
 source ~/.vim/plugin/buftabs.vim
 hi statusline ctermbg=white ctermfg=DarkGrey
+
+set backupskip=/tmp/*,/private/tmp/*
