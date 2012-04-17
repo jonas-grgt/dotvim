@@ -49,6 +49,7 @@ set hidden
 
 source ~/.vim/plugin/comments.vim
 source ~/.vim/plugin/closetag.vim
+source ~/.vim/bundle/surround/plugin/surround.vim
 
 set nu
 syn on
