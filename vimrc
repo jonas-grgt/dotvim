@@ -50,6 +50,7 @@ set hidden
 source ~/.vim/plugin/comments.vim
 source ~/.vim/plugin/closetag.vim
 source ~/.vim/bundle/surround/plugin/surround.vim
+source ~/.vim/plugin/closebuffer.vim
 
 set nu
 syn on
@@ -82,7 +83,7 @@ map WN :wnext<cr>
 map NN :next!<cr>
 
 map BN :bn<cr>
-map BD :bd<cr>
+"map BD :bd<cr>
 map BP :bp<cr>
 
 map FF :FufFile<cr>
