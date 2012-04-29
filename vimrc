@@ -26,7 +26,7 @@ endif
 
 "filetype
 filetype plugin on
-filetype indent plugin on
+filetype plugin indent on
 
 "python settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -157,3 +157,74 @@ source ~/.vim/plugin/buftabs.vim
 hi statusline ctermbg=white ctermfg=DarkGrey
 
 set backupskip=/tmp/*,/private/tmp/*
+
+
+function! BufSel(pattern)
+  let bufcount = bufnr("$")
+  let currbufnr = 1
+  let nummatches = 0
+  let firstmatchingbufnr = 0
+  while currbufnr <= bufcount
+    if(bufexists(currbufnr))
+      let currbufname = bufname(currbufnr)
+      if(match(currbufname, a:pattern) > -1)
+        echo currbufnr . ": ". bufname(currbufnr)
+        let nummatches += 1
+        let firstmatchingbufnr = currbufnr
+      endif
+    endif
+    let currbufnr = currbufnr + 1
+  endwhile
+  if(nummatches == 1)
+    execute ":buffer ". firstmatchingbufnr
+  elseif(nummatches > 1)
+    let desiredbufnr = input("Enter buffer number: ")
+    if(strlen(desiredbufnr) != 0)
+      execute ":e ". desiredbufnr
+    endif
+  else
+    echo "No matching buffers"
+  endif
+endfunction
+
+"Bind the BufSel() function to a user-command
+command! -nargs=1 Bs :call BufSel("<args>")
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+" Find file in current directory and edit it.
+function! Find(name)
+  let l:list=system("find . -name '".a:name."' | perl -ne 'print \"$.\\t$_\"'")
+  let l:num=strlen(substitute(l:list, "[^\n]", "", "g"))
+  if l:num < 1
+    echo "'".a:name."' not found"
+    return
+  endif
+  if l:num != 1
+    echo l:list
+    let l:input=input("Which ? (CR=nothing)\n")
+    if strlen(l:input)==0
+      return
+    endif
+    if strlen(substitute(l:input, "[0-9]", "", "g"))>0
+      echo "Not a number"
+      return
+    endif
+    if l:input<1 || l:input>l:num
+      echo "Out of range"
+      return
+    endif
+    let l:line=matchstr("\n".l:list, "\n".l:input."\t[^\n]*")
+  else
+    let l:line=l:list
+  endif
+  let l:line=substitute(l:line, "^[^\t]*\t./", "", "")
+  execute ":e ".l:line
+endfunction
+command! -nargs=1 Find :call Find("<args>")
