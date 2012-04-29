@@ -76,6 +76,8 @@ set dictionary+=/usr/share/dict/words
 map TT :TlistToggle<cr>
 map TU :TlistUpdate<cr>
 
+
+
 map NHL :nohl<cr>
 map ss :w<cr>
 
@@ -228,3 +230,4 @@ function! Find(name)
   execute ":e ".l:line
 endfunction
 command! -nargs=1 Find :call Find("<args>")
+nmap Ff :Find 
