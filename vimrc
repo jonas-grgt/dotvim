@@ -67,6 +67,7 @@ set dictionary+=/usr/share/dict/words
 
 
 "let g:pydiction_location = "/Users/Jonas/.vim/scripts/pydiction/complete-dict"
+highlight Search ctermfg=Black ctermbg=Green cterm=None
 
 
 """""""""""""""""""""""""""""""""
@@ -118,10 +119,6 @@ set ofu=syntaxcomplete
 ""              ""
 ":au BufNewFile *.html e ~/.vim/templates/html
 ":au BufNewFile *.py e ~/.vim/templates/python
-
-
-
-
 
 function CssParse()
     if g:cssparse == "styl"
