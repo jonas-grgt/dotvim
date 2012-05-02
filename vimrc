@@ -93,6 +93,13 @@ map FF :FufFile<cr>
 map FD :FufDir<cr>
 map FB :FufBuffer<cr>
 
+" next tab
+map <TAB>n :tabnext<CR>
+" next tab
+map <TAB>b :tabprevious<CR>
+" open new empty tab
+map <TAB>o :tabnew<CR>
+map <TAB>c :tabclose<CR>
 
 nnoremap    CL :set cursorline!<CR>
 
