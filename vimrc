@@ -228,3 +228,7 @@ function! Find(name)
 endfunction
 command! -nargs=1 Find :call Find("<args>")
 nmap Ff :Find 
+
+if has('python') && filereadable($VIRTUAL_ENV . '/.vimrc')
+	source $VIRTUAL_ENV/.vimrc
+endif
