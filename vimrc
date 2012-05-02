@@ -232,3 +232,6 @@ nmap Ff :Find
 if has('python') && filereadable($VIRTUAL_ENV . '/.vimrc')
 	source $VIRTUAL_ENV/.vimrc
 endif
+
+" setup supertab
+source ~/dotvim/bundle/supertab/plugin/supertab.vim
