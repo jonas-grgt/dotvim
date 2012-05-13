@@ -1,10 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"           Pathogen                                            " 
-"#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"call pathogen#runtime_append_all_bundles()
-"#call pathogen#helptags()
-"#
-"#
 "#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           OS Specific options                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -36,13 +29,14 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType sass set sts=2
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType html set omnifunc=htmlcompleteCompleteTags
+autocmd FileType css set omnifunc=csscompleteCompleteCSS
+autocmd FileType xml set omnifunc=xmlcompleteCompleteTags
 
 "Omnicomplete options
 set completeopt=menuone,longest,preview
 set foldlevel=99
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 "allows to move to a different buffer without saving the current first
 set hidden
@@ -60,14 +54,13 @@ set ai "auto indenting
 set ic "insensitive search
 set hls
 set gdefault "Enables the /g option when using the substitute command :s.  
+set expandtab
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+filetype plugin on
+set ofu=syntaxcomplete
 
-
-
-set dictionary+=/usr/share/dict/words
-
-
-"let g:pydiction_location = "/Users/Jonas/.vim/scripts/pydiction/complete-dict"
-highlight Search ctermfg=Black ctermbg=Green cterm=None
 
 
 """""""""""""""""""""""""""""""""
@@ -101,25 +94,13 @@ map <TAB>b :tabprevious<CR>
 map <TAB>o :tabnew<CR>
 map <TAB>c :tabclose<CR>
 
+noremap <C-w><C-g> <C-w>10+
+noremap <C-w><C-s> <C-w>10-
+
 nnoremap    CL :set cursorline!<CR>
 
-:au BufNewFile,BufRead *.tex map £ :!open -a /Applications/Preview.app/Contents/MacOS/Preview %:t:r.pdf<cr><cr>
-:au Bufnewfile,bufread *.tex map ° :!pdflatex %:h/%:t:r.tex<cr><cr>
-":au Bufnewfile,bufread *.tex map ° :!pdflatex escape("%:h", "/")/%:t:r.tex<cr>
-"
+highlight Search ctermfg=Black ctermbg=Green cterm=None
 
-
-
-set expandtab
-"set textwidth=79
-set tabstop=8
-set softtabstop=4
-set shiftwidth=4
-
-let g:cssparse="styl"
-
-filetype plugin on
-set ofu=syntaxcomplete
 
 ""              ""
 " File Templates "
@@ -243,8 +224,5 @@ endif
 " setup supertab
 "source ~/dotvim/bundle/supertab/plugin/supertab.vim
 "
-" Autocomplete options
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
