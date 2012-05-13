@@ -241,4 +241,10 @@ if has('python') && filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 " setup supertab
-source ~/dotvim/bundle/supertab/plugin/supertab.vim
+"source ~/dotvim/bundle/supertab/plugin/supertab.vim
+"
+" Autocomplete options
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
