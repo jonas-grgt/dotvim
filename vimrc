@@ -45,6 +45,7 @@ source ~/.vim/plugin/comments.vim
 source ~/.vim/plugin/closetag.vim
 source ~/.vim/bundle/surround/plugin/surround.vim
 source ~/.vim/plugin/closebuffer.vim
+source ~/.vim/plugin/mru.vim
 
 set nu
 syn on
@@ -96,6 +97,8 @@ map <TAB>c :tabclose<CR>
 
 noremap <C-w><C-g> <C-w>10+
 noremap <C-w><C-s> <C-w>10-
+noremap <C-m><C-r> :MRU<CR>
+
 
 nnoremap    CL :set cursorline!<CR>
 
