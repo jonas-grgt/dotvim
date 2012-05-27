@@ -89,12 +89,12 @@ map FD :FufDir<cr>
 map FB :FufBuffer<cr>
 
 " next tab
-map <TAB>n :tabnext<CR>
+"map <TAB>n :tabnext<CR>
 " next tab
-map <TAB>b :tabprevious<CR>
+"map <TAB>b :tabprevious<CR>
 " open new empty tab
-map <TAB>o :tabnew<CR>
-map <TAB>c :tabclose<CR>
+"map <TAB>o :tabnew<CR>
+"map <TAB>c :tabclose<CR>
 
 noremap <C-w><C-g> <C-w>10+
 noremap <C-w><C-s> <C-w>10-
@@ -240,3 +240,5 @@ endfunction
 
 command! Rename :call Rename()
 nmap RN :Rename<CR>
+
+set runtimepath+=/home/jonasg/dotvim/bundle/vam/
