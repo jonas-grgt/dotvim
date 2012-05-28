@@ -21,9 +21,13 @@ endif
 filetype plugin on
 filetype plugin indent on
 
+
 "python settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 :au FileType *.py set ts=4 sts=4 sw=4
+
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 
 "sass file settings
 autocmd FileType sass set sts=2
