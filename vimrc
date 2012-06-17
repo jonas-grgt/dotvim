@@ -1,25 +1,3 @@
-"#"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"           OS Specific options                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let os = substitute(system('uname'), "\n", "", "") 
-let hn = substitute(system('hostname'), "\n", "", "") " hostname
-if os == "Linux"
-    colorscheme pablo
-endif
-if hn == "blackey"
-    colorscheme pablo
-    set nocursorline
-endif
-if hn == "s7\.wservices\.ch"
-    colorscheme default
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    "                 Setup Taglist                                 "
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
-    let Tlist_Show_One_File=1
-    nmap <silent> <F2> :TlistOpen<CR>
-    nmap <silent> <F3> :TlistAddFiles  
-endif
 
 "filetype
 filetype plugin on
@@ -51,7 +29,7 @@ set hidden
 
 source ~/.vim/plugin/comments.vim
 source ~/.vim/plugin/closetag.vim
-source ~/.vim/bundle/surround/plugin/surround.vim
+"source ~/.vim/bundle/surround/plugin/surround.vim
 source ~/.vim/plugin/closebuffer.vim
 source ~/.vim/plugin/mru.vim
 
@@ -313,3 +291,26 @@ set runtimepath+=/home/jonasg/dotvim/bundle/vam/
 
 
 call vam#ActivateAddons(['snipmate'], {'auto_install' : 1})
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"           OS Specific options                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let os = substitute(system('uname'), "\n", "", "") 
+let hn = substitute(system('hostname'), "\n", "", "") " hostname
+if os == "Linux"
+    colorscheme pablo
+endif
+if hn == "blackey"
+    colorscheme pablo
+    set nocursorline
+endif
+if hn == "s7\.wservices\.ch"
+    colorscheme default
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "                 Setup Taglist                                 "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
+    let Tlist_Show_One_File=1
+    nmap <silent> <F2> :TlistOpen<CR>
+    nmap <silent> <F3> :TlistAddFiles  
+endif
