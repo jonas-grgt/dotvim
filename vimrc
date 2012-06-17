@@ -1,4 +1,3 @@
-
 "filetype
 filetype plugin on
 filetype plugin indent on
@@ -303,6 +302,8 @@ endif
 if hn == "blackey"
     colorscheme django 
     set nocursorline
+    :hi Pmenu ctermbg=white ctermfg=red
+    :hi PmenuSel ctermfg=white ctermbg=red
 endif
 if hn == "s7\.wservices\.ch"
     colorscheme default
