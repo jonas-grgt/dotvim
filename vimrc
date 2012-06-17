@@ -6,6 +6,10 @@ let hn = substitute(system('hostname'), "\n", "", "") " hostname
 if os == "Linux"
     colorscheme pablo
 endif
+if hn == "blackey"
+    colorscheme pablo
+    set nocursorline
+endif
 if hn == "s7\.wservices\.ch"
     colorscheme default
     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
