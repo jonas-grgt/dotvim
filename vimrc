@@ -301,7 +301,7 @@ if os == "Linux"
     colorscheme pablo
 endif
 if hn == "blackey"
-    colorscheme pablo
+    colorscheme django 
     set nocursorline
 endif
 if hn == "s7\.wservices\.ch"
