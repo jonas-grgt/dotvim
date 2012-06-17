@@ -119,9 +119,10 @@ au BufRead,BufNewFile *.css  setlocal autoread
 au BufWrite *.styl  call CssParse() 
 nmap <C-y> :call CssParse()<cr>
 
-"Set the cursor to a full horizontal line
+"Highlinting
 set cursorline
 :hi CursorLine gui=NONE ctermbg=white cterm=NONE
+:hi StatusLine gui=NONE ctermbg=yellow ctermfg=red
 
 
 """""""""""""""""""""""""""""""""
