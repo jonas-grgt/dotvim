@@ -119,10 +119,6 @@ au BufRead,BufNewFile *.css  setlocal autoread
 au BufWrite *.styl  call CssParse() 
 nmap <C-y> :call CssParse()<cr>
 
-"Highlinting
-set cursorline
-:hi CursorLine gui=NONE ctermbg=white cterm=NONE
-:hi StatusLine gui=NONE ctermbg=yellow ctermfg=red
 
 
 """""""""""""""""""""""""""""""""
@@ -295,16 +291,15 @@ call vam#ActivateAddons(['snipmate'], {'auto_install' : 1})
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           OS Specific options                                 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set cursorline
 let os = substitute(system('uname'), "\n", "", "") 
 let hn = substitute(system('hostname'), "\n", "", "") " hostname
 if os == "Linux"
     colorscheme pablo
 endif
 if hn == "blackey"
-    colorscheme django 
+    colorscheme desert 
     set nocursorline
-    :hi Pmenu ctermbg=white ctermfg=red
-    :hi PmenuSel ctermfg=white ctermbg=red
 endif
 if hn == "s7\.wservices\.ch"
     colorscheme default
@@ -316,3 +311,10 @@ if hn == "s7\.wservices\.ch"
     nmap <silent> <F2> :TlistOpen<CR>
     nmap <silent> <F3> :TlistAddFiles  
 endif
+
+"Highlinting
+:hi CursorLine gui=NONE ctermbg=white cterm=NONE
+:hi StatusLine gui=NONE ctermbg=yellow ctermfg=red
+:hi Pmenu ctermbg=white ctermfg=red
+:hi PmenuSel ctermfg=white ctermbg=red
+:hi Folded ctermbg=None ctermfg=white

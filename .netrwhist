@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/jonasg/dev/wiespeeltwaar'
-let g:netrw_dirhist_2='/home/jonasg/django-wiespeeltwaar'
-let g:netrw_dirhist_3='/home/jonasg/dev/wiespeeltwaar/apps/gig/views'
-let g:netrw_dirhist_4='/home/jonasg/dev/wiespeeltwaar/staticfiles/css'
-let g:netrw_dirhist_5='/home/jonasg/dev/wiespeeltwaar/tests/apps_test/deps_test'
-let g:netrw_dirhist_6='/home/jonasg/dev/wiespeeltwaar/tests/apps_test/deps_test/gig_factory_test'
-let g:netrw_dirhist_7='/home/jonasg/dev/wiespeeltwaar/tests/apps_test/deps_test'
-let g:netrw_dirhist_8='/home/jonasg/dev/wiespeeltwaar/staticfiles'
-let g:netrw_dirhist_9='/etc'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/jonas/django-tests/cbv/appointment'
+let g:netrw_dirhist_2='/home/jonas/.config/awesome/themes'
+let g:netrw_dirhist_3='/home/jonas/.config/awesome/themes/default'
