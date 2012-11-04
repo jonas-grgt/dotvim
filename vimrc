@@ -313,7 +313,7 @@ if hn == "s7\.wservices\.ch"
 endif
 
 "Highlinting
-:hi CursorLine gui=NONE ctermbg=white cterm=NONE
+:hi CursorLine gui=NONE ctermbg=NONE cterm=NONE
 :hi StatusLine gui=NONE ctermbg=yellow ctermfg=red
 :hi Pmenu ctermbg=white ctermfg=red
 :hi PmenuSel ctermfg=white ctermbg=red
