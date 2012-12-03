@@ -173,7 +173,7 @@ endfunc
 
 " Find file in current directory and edit it.
 function! Find(name)
-  let l:list=system("find . -name '".a:name."' | perl -ne 'print \"$.\\t$_\"'")
+  let l:list=system("find . -iname '*".a:name."*' -not -name *.pyc | perl -ne 'print \"$.\\t$_\"'")
   let l:num=strlen(substitute(l:list, "[^\n]", "", "g"))
   if l:num < 1
     echo "'".a:name."' not found"
