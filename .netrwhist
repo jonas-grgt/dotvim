@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/jonas/django-tests/cbv/appointment'
 let g:netrw_dirhist_2='/home/jonas/.config/awesome/themes'
 let g:netrw_dirhist_3='/home/jonas/.config/awesome/themes/default'
+let g:netrw_dirhist_4='/Users/jonas/dev/proefbox/proefbox/views'
+let g:netrw_dirhist_5='/Users/jonas/Envs/outspot/lib/python2.7/site-packages/grappelli/templates/admin'
+let g:netrw_dirhist_6='/Users/jonas/dev/adagio_erp/crm/views'
+let g:netrw_dirhist_7='/Users/jonas/dev/adagio_erp/media/contacts'
+let g:netrw_dirhist_8='/Users/jonas/dev/erp/crm/views'

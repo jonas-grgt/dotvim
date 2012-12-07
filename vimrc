@@ -41,7 +41,7 @@ set ic "insensitive search
 set hls
 set gdefault "Enables the /g option when using the substitute command :s.  
 set expandtab
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
