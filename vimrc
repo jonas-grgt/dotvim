@@ -10,16 +10,11 @@ autocmd FileType html set omnifunc=htmlcompleteCompleteTags
 autocmd FileType css set omnifunc=csscompleteCompleteCSS
 autocmd FileType xml set omnifunc=xmlcompleteCompleteTags
 
-"Omnicomplete options
-set completeopt=menuone,longest,preview
+set completeopt=menuone,longest,preview "Omnicomplete options
 set foldlevel=99
-
-"allows to move to a different buffer without saving the current first
-set hidden
-
+set hidden "allows to move to a different buffer without saving the current first
 set nu
-syn on
-set autoindent
+set autoindent " always set autoindenting on
 set incsearch
 set ai "auto indenting
 set ic "insensitive search
@@ -30,9 +25,10 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
-filetype plugin on
 set ofu=syntaxcomplete
-
+set nobackup " Don't create backup files
+set noswapfile " Don't create swap files
+syn on
 
 
 """""""""""""""""""""""""""""""""
@@ -42,8 +38,6 @@ set ofu=syntaxcomplete
 map TT :TlistToggle<cr>
 map TU :TlistUpdate<cr>
 
-
-
 map NHL :nohl<cr>
 map ss :w<cr>
 
@@ -51,7 +45,7 @@ map WN :wnext<cr>
 map NN :next!<cr>
 
 map BN :bn<cr>
-"map BD :bd<cr>
+map BD :bd<cr>
 map BP :bp<cr>
 
 map FF :FufFile<cr>
@@ -70,9 +64,7 @@ noremap <C-w><C-g> <C-w>10+
 noremap <C-w><C-s> <C-w>10-
 noremap <C-m><C-r> :MRU<CR>
 
-
 nnoremap    CL :set cursorline!<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "           OS Specific options                                 "
@@ -107,70 +99,6 @@ endif
 :hi Search ctermfg=Black ctermbg=Green cterm=None
 
 
-""              ""
-" File Templates "
-""              ""
-":au BufNewFile *.html e ~/.vim/templates/html
-":au BufNewFile *.py e ~/.vim/templates/python
-
-function CssParse()
-    if g:cssparse == "styl"
-
-        let l:file=expand("%:p")
-        "TODO until possible bug is fixed within stylus
-        "MOve the directory containing l:file 
-        "Run stylus
-        "Return the previous working directory
-        let l:nfile = substitute(l:file, ".styl$", ".css", "*")
-        execute ':silent !stylus < '. shellescape(l:file, 1) .
-                           \' > '.shellescape(l:nfile, 1)
-    endif
-endfunction
-
-function StylusInit()
-    setl sts=2
-endfunction
-
-au BufRead,BufNewFile *.css  setlocal autoread 
-au BufWrite *.styl  call CssParse() 
-nmap <C-y> :call CssParse()<cr>
-
-
-
-hi statusline ctermbg=white ctermfg=DarkGrey
-
-set backupskip=/tmp/*,/private/tmp/*
-
-function! BufSel(pattern)
-  let bufcount = bufnr("$")
-  let currbufnr = 1
-  let nummatches = 0
-  let firstmatchingbufnr = 0
-  while currbufnr <= bufcount
-    if(bufexists(currbufnr))
-      let currbufname = bufname(currbufnr)
-      if(match(currbufname, a:pattern) > -1)
-        echo currbufnr . ": ". bufname(currbufnr)
-        let nummatches += 1
-        let firstmatchingbufnr = currbufnr
-      endif
-    endif
-    let currbufnr = currbufnr + 1
-  endwhile
-  if(nummatches == 1)
-    execute ":buffer ". firstmatchingbufnr
-  elseif(nummatches > 1)
-    let desiredbufnr = input("Enter buffer number: ")
-    if(strlen(desiredbufnr) != 0)
-      execute ":e ". desiredbufnr
-    endif
-  else
-    echo "No matching buffers"
-  endif
-endfunction
-
-"Bind the BufSel() function to a user-command
-command! -nargs=1 Bs :call BufSel("<args>")
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -295,4 +223,4 @@ set runtimepath+=/home/jonasg/dotvim/bundle/vam/
         " Vim 7.0 users see BUGS section [3]
 
 
-call vam#ActivateAddons(['snipmate', 'FuzzyFinder', 'buftabs', 'mru', 'python_check_syntax', 'comments%1528'], {'auto_install' : 1})
+call vam#ActivateAddons(['snipmate', 'python_check_syntax', 'FuzzyFinder', 'buftabs', 'mru', 'comments%1528'], {'auto_install' : 1})
