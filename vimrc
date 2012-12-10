@@ -223,4 +223,4 @@ set runtimepath+=/home/jonasg/dotvim/bundle/vam/
         " Vim 7.0 users see BUGS section [3]
 
 
-call vam#ActivateAddons(['snipmate', 'python_check_syntax', 'FuzzyFinder', 'buftabs', 'mru', 'comments%1528'], {'auto_install' : 1})
+call vam#ActivateAddons(['snipmate', 'sparkup', 'python_check_syntax', 'FuzzyFinder', 'buftabs', 'mru', 'comments%1528'], {'auto_install' : 1})
