@@ -2,17 +2,9 @@
 filetype plugin on
 filetype plugin indent on
 
-
-"python settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-:au FileType *.py set ts=4 sts=4 sw=4
-
 autocmd BufNewFile,BufRead *.json set ft=javascript
-
-
-"sass file settings
 autocmd FileType sass set sts=2
-
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcompleteCompleteTags
 autocmd FileType css set omnifunc=csscompleteCompleteCSS
@@ -21,16 +13,9 @@ autocmd FileType xml set omnifunc=xmlcompleteCompleteTags
 "Omnicomplete options
 set completeopt=menuone,longest,preview
 set foldlevel=99
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 "allows to move to a different buffer without saving the current first
 set hidden
-
-source ~/.vim/plugin/comments.vim
-source ~/.vim/plugin/closetag.vim
-"source ~/.vim/bundle/surround/plugin/surround.vim
-source ~/.vim/plugin/closebuffer.vim
-source ~/.vim/plugin/mru.vim
 
 set nu
 syn on
@@ -88,7 +73,38 @@ noremap <C-m><C-r> :MRU<CR>
 
 nnoremap    CL :set cursorline!<CR>
 
-highlight Search ctermfg=Black ctermbg=Green cterm=None
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"           OS Specific options                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set cursorline
+let os = substitute(system('uname'), "\n", "", "") 
+let hn = substitute(system('hostname'), "\n", "", "") " hostname
+if os == "Linux"
+    colorscheme pablo
+endif
+if hn == "blackey"
+    colorscheme desert 
+    set nocursorline
+endif
+if hn == "s7\.wservices\.ch"
+    colorscheme default
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "                 Setup Taglist                                 "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
+    let Tlist_Show_One_File=1
+    nmap <silent> <F2> :TlistOpen<CR>
+    nmap <silent> <F3> :TlistAddFiles  
+endif
+
+"Highlinting
+:hi CursorLine gui=NONE ctermbg=NONE cterm=NONE
+:hi StatusLine gui=NONE ctermbg=yellow ctermfg=red
+:hi Pmenu ctermbg=white ctermfg=red
+:hi PmenuSel ctermfg=white ctermbg=red
+:hi Folded ctermbg=None ctermfg=white
+:hi Search ctermfg=Black ctermbg=Green cterm=None
 
 
 ""              ""
@@ -121,16 +137,9 @@ nmap <C-y> :call CssParse()<cr>
 
 
 
-"""""""""""""""""""""""""""""""""
-"       buftabs settings        "
-"""""""""""""""""""""""""""""""""
-set laststatus=2
-let g:buftabs_in_statusline=1
-source ~/.vim/plugin/buftabs.vim
 hi statusline ctermbg=white ctermfg=DarkGrey
 
 set backupskip=/tmp/*,/private/tmp/*
-
 
 function! BufSel(pattern)
   let bufcount = bufnr("$")
@@ -286,35 +295,4 @@ set runtimepath+=/home/jonasg/dotvim/bundle/vam/
         " Vim 7.0 users see BUGS section [3]
 
 
-call vam#ActivateAddons(['snipmate', 'python_check_syntax'], {'auto_install' : 1})
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"           OS Specific options                                 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set cursorline
-let os = substitute(system('uname'), "\n", "", "") 
-let hn = substitute(system('hostname'), "\n", "", "") " hostname
-if os == "Linux"
-    colorscheme pablo
-endif
-if hn == "blackey"
-    colorscheme desert 
-    set nocursorline
-endif
-if hn == "s7\.wservices\.ch"
-    colorscheme default
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    "                 Setup Taglist                                 "
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
-    let Tlist_Show_One_File=1
-    nmap <silent> <F2> :TlistOpen<CR>
-    nmap <silent> <F3> :TlistAddFiles  
-endif
-
-"Highlinting
-:hi CursorLine gui=NONE ctermbg=NONE cterm=NONE
-:hi StatusLine gui=NONE ctermbg=yellow ctermfg=red
-:hi Pmenu ctermbg=white ctermfg=red
-:hi PmenuSel ctermfg=white ctermbg=red
-:hi Folded ctermbg=None ctermfg=white
+call vam#ActivateAddons(['snipmate', 'FuzzyFinder', 'buftabs', 'mru', 'python_check_syntax', 'comments%1528'], {'auto_install' : 1})
