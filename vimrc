@@ -9,6 +9,8 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcompleteCompleteTags
 autocmd FileType css set omnifunc=csscompleteCompleteCSS
 autocmd FileType xml set omnifunc=xmlcompleteCompleteTags
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
 
 set completeopt=menuone,longest,preview "Omnicomplete options
 set foldlevel=99

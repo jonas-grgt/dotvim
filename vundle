@@ -15,6 +15,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'snipMate'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'https://github.com/techlivezheng/vim-plugin-minibufexpl'
