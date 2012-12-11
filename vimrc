@@ -160,4 +160,4 @@ endfunction
 command! Rename :call Rename()
 nmap RN :Rename<CR>
 
-source ~/.vim/vamrc
+source ~/.vim/vundle
