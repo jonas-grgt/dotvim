@@ -19,6 +19,7 @@ Bundle 'snipMate'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'https://github.com/techlivezheng/vim-plugin-minibufexpl'
+Bundle 'https://github.com/lambdalisue/vim-django-support'
 " ...
 
 filetype plugin indent on     " required!

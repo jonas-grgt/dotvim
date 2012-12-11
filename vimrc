@@ -1,3 +1,4 @@
+source ~/.vim/vundle
 "filetype
 filetype plugin on
 filetype plugin indent on
@@ -162,4 +163,3 @@ endfunction
 command! Rename :call Rename()
 nmap RN :Rename<CR>
 
-source ~/.vim/vundle
