@@ -1,4 +1,6 @@
 source ~/.vim/vundle
+source ~/.vim/plugins/bclose.vim
+
 "filetype
 filetype plugin on
 filetype plugin indent on
@@ -14,7 +16,7 @@ autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 
 set completeopt=menuone,longest,preview "Omnicomplete options
-set foldlevel=99
+set foldlevel=101
 set hidden "allows to move to a different buffer without saving the current first
 set nu
 set autoindent " always set autoindenting on
@@ -35,7 +37,7 @@ syn on
 
 
 """""""""""""""""""""""""""""""""
-" Remapping of files
+" Remapping of keys
 """""""""""""""""""""""""""""""""
 
 map TT :TlistToggle<cr>
@@ -48,7 +50,7 @@ map WN :wnext<cr>
 map NN :next!<cr>
 
 map BN :bn<cr>
-map BD :bd<cr>
+map BD :Bclose!<cr>
 map BP :bp<cr>
 
 map FF :FufFile<cr>
@@ -165,3 +167,14 @@ nmap RN :Rename<CR>
 
 
 source ~/.vim/plugins/comments.vim
+source ~/.vim/plugins/visualmark.vim
+
+function SignAMark()
+    let mark_name = input('Enter mark name: ')
+    let cur_line = line('.')
+    exe ':mark ' . mark_name
+    exe ":sign define mark text=!! linehl=Todo"
+    exe ":sign place " . mark_name . " line=" . cur_line . " name=mark file=" . expand('%:p')
+endfunction
+
+map m :call SignAMark()<cr>
