@@ -167,14 +167,21 @@ nmap RN :Rename<CR>
 
 
 source ~/.vim/plugins/comments.vim
-source ~/.vim/plugins/visualmark.vim
 
-function SignAMark()
+let s:marks = {}
+function LoadCurrentMarksForFile()
+    let current_marks = call :marks " . expand("%:p")
+    echo current_marks
+endfunction
+function VisualMark()
     let mark_name = input('Enter mark name: ')
     let cur_line = line('.')
+    let s:marks[mark_name] = cur_line
     exe ':mark ' . mark_name
-    exe ":sign define mark text=!! linehl=Todo"
-    exe ":sign place " . mark_name . " line=" . cur_line . " name=mark file=" . expand('%:p')
+    exe ":sign define mark text=" . mark_name . " linehl=Visual"
+    exe ":sign place " . cur_line . " line=" . cur_line . " name=mark file=" . expand("%:p")
+    echo s:marks
 endfunction
 
-map m :call SignAMark()<cr>
+map m :call VisualMark()<cr>
+"call LoadCurrentMarksForFile()
