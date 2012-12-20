@@ -20,6 +20,7 @@ Bundle 'snipMate'
 "Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'https://github.com/techlivezheng/vim-plugin-minibufexpl'
 Bundle 'https://github.com/lambdalisue/vim-django-support'
+Bundle 'BufOnly.vim'
 " ...
 
 filetype plugin indent on     " required!
