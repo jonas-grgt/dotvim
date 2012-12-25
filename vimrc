@@ -1,7 +1,7 @@
 source ~/.vim/vundle
 source ~/.vim/plugins/bclose.vim
+source ~/.vim/plugins/comments.vim
 
-"filetype
 filetype plugin on
 filetype plugin indent on
 
@@ -86,13 +86,13 @@ if hn == "blackey"
 endif
 if hn == "s7\.wservices\.ch"
     colorscheme default
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    "                 Setup Taglist                                 "
-    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
-    let Tlist_Show_One_File=1
-    nmap <silent> <F2> :TlistOpen<CR>
-    nmap <silent> <F3> :TlistAddFiles  
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                 Setup Taglist                                 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Ctags_Cmd="/home/jonasg/bin/ctags"
+let Tlist_Show_One_File=1
+nmap <silent> <F2> :TlistOpen<CR>
+nmap <silent> <F3> :TlistAddFiles  
 endif
 
 "Highlinting
@@ -151,7 +151,6 @@ endif
 
 " setup supertab
 "source ~/dotvim/bundle/supertab/plugin/supertab.vim
-"
 
 function Rename()
   let new_file_name = input('New filename: ')
@@ -164,9 +163,6 @@ endfunction
 
 command! Rename :call Rename()
 nmap RN :Rename<CR>
-
-
-source ~/.vim/plugins/comments.vim
 
 let s:marks = {}
 function LoadCurrentMarksForFile()
