@@ -57,6 +57,8 @@ map FF :FufFile<cr>
 map FD :FufDir<cr>
 map FB :FufBuffer<cr>
 
+map NT :NERDTree<cr>
+
 " next tab
 "map <TAB>n :tabnext<CR>
 " next tab
