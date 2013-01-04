@@ -23,6 +23,7 @@ Bundle 'https://github.com/techlivezheng/vim-plugin-minibufexpl'
 Bundle 'https://github.com/scrooloose/nerdtree'
 Bundle 'https://github.com/lambdalisue/vim-django-support'
 Bundle 'https://github.com/klen/python-mode'
+Bundle "pangloss/vim-javascript"
 " ...
 
 filetype plugin indent on     " required!
