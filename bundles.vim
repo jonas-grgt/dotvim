@@ -21,6 +21,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'rbgrouleff/bclose.vim'
+NeoBundle 'leafgarland/typescript-vim'
 
 " Required:
 call neobundle#end()
