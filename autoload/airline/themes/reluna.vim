@@ -30,7 +30,7 @@ let g:airline#themes#reluna#palette.insert_paste = {
 
 
 let g:airline#themes#reluna#palette.replace = copy(g:airline#themes#reluna#palette.insert)
-let g:airline#themes#reluna#palette.replace.airline_a = [ s:I2[0]   , '#920000' , s:I2[2] , 88     , ''     ]
+let g:airline#themes#reluna#palette.replace.airline_a = [ s:I2[0]   , '#800000' , s:I2[2] , 1     , ''     ]
 let g:airline#themes#reluna#palette.replace_modified = g:airline#themes#reluna#palette.insert_modified
 
 let s:V1 = [ '#ffff9a' , '#ff8036' , 222 , 208 ]
@@ -38,13 +38,13 @@ let s:V2 = [ '#ffffff' , '#003f3f' , 231 , 29 ]
 let s:V3 = [ '#ffffff' , '#002b2b' , 231  , 23  ]
 let g:airline#themes#reluna#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#reluna#palette.visual_modified = {
-      \ 'airline_c': [ '#ffffff' , '#450000' , 231     , 52      , ''     ] ,
+      \ 'airline_c': [ '#ffffff' , '#800000' , 231     , 1      , ''     ] ,
       \ }
 
 let s:IA = [ '#4e4e4e' , '#002b2b' , 59 , 23 , '' ]
 let g:airline#themes#reluna#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
 let g:airline#themes#reluna#palette.inactive_modified = {
-      \ 'airline_c': [ '#e20000' , ''        , 166      , ''      , ''     ] ,
+      \ 'airline_c': [ '#800000' , ''        , 1      , ''      , ''     ] ,
       \ }
 
 let g:airline#themes#reluna#palette.tabline = {
@@ -52,7 +52,7 @@ let g:airline#themes#reluna#palette.tabline = {
       \ 'airline_tabsel':  ['#ffffff', '#2e8b57',  231, 36, ''],
       \ 'airline_tabtype':  ['#ffffff', '#005252',  231, 36, ''],
       \ 'airline_tabfill':  ['#ffffff', '#002b2b',  231, 23, ''],
-      \ 'airline_tabmod':  ['#ffffff', '#780000',  231, 88, ''],
+      \ 'airline_tabmod':  ['#ffffff', '#800000',  231, 1, ''],
       \ }
 
 let s:WI = [ '#ffffff', '#5f0000', 231, 88 ]
