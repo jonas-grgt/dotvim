@@ -17,13 +17,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'rbgrouleff/bclose.vim'
 NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'lilydjwg/colorizer'
 
 " Required:
 call neobundle#end()
