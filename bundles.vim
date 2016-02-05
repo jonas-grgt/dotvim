@@ -15,6 +15,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
