@@ -11,3 +11,5 @@ set laststatus=2 "vim-airline doesn't appear until I create a new split, see :h 
 let g:ctrlp_custom_ignore = { 
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|project_files$\|test$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' } " files and directories to ignore 
+let g:ctrlp_map='<c-o>'
+let g:ctrlp_cmd='CtrlP'
