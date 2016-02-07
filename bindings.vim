@@ -6,10 +6,12 @@ let mapleader=";"
 
 map NHL :nohl<cr>
 map ss :w<cr>
+map sss :wall!<cr>
 
 map BN :bn<cr>
 map BD :Bclose!<cr>
 map BP :bp<cr>
+map <F6> :%s/<c-r><c-w>//g<LEFT><LEFT>
 
 " After selecting something in visual mode and shifting, 
 " I still want that selection intact

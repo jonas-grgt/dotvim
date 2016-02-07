@@ -13,7 +13,7 @@ let s:N2 = [ '#ffffff' , '#003f3f' , 231 , 29 ]
 let s:N3 = [ '#ffffff' , '#002b2b' , 231  , 23 ]
 let g:airline#themes#reluna#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#reluna#palette.normal_modified = {
-      \ 'airline_c': [ '#ffffff' , '#450000' , 231     , 52      , ''     ] ,
+      \ 'airline_c': [ '#ffffff' , '#800000' , 231     , 1      , ''     ] ,
       \ }
 
 
@@ -55,7 +55,7 @@ let g:airline#themes#reluna#palette.tabline = {
       \ 'airline_tabmod':  ['#ffffff', '#800000',  231, 1, ''],
       \ }
 
-let s:WI = [ '#ffffff', '#5f0000', 231, 88 ]
+let s:WI = [ '#ffffff', '#800000', 231, 95 ]
 let g:airline#themes#reluna#palette.normal.airline_warning = [
      \ s:WI[0], s:WI[1], s:WI[2], s:WI[3]
      \ ]

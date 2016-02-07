@@ -23,6 +23,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'rbgrouleff/bclose.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'lilydjwg/colorizer'
+NeoBundle 'Yggdroot/indentLine'
 
 " Required:
 call neobundle#end()

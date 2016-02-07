@@ -13,3 +13,7 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' } " files and directories to ignore 
 let g:ctrlp_map='<c-o>'
 let g:ctrlp_cmd='CtrlP'
+" ------------------------------------------------"
+"                   identline                     "
+" ------------------------------------------------"
+let g:indentLine_color_term=234
